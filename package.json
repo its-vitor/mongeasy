@@ -1,0 +1,10 @@
+{
+  "name": "mongeasy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "mongoose": "^7.6.3"
+  }
+}
