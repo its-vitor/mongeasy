@@ -19,6 +19,11 @@ O `Mongeasy` é uma biblioteca projetada para simplificar o uso do Mongoose. Com
 
 - **Objetivo**: Simplificar o trabalho dos desenvolvedores em ter que produzir diversas funções para otimizarem seus códigos e torna-los mais práticos, visto que `Mongeasy` trata-se de um grande template de tudo que é possível se fazer com o MongoDB.
 
+## Dependências
+- `mongoose ^7.6.3`
+- `bcrpt ^5.1.1`
+- `jsonwebtoken ^9.0.2`
+
 <h1 align="center">Comunicação</h1>
 <p align="center">
     <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="">
