@@ -12,9 +12,12 @@
     </td>
   </tr>
 </table>
-
-
 <br><br>
+
+## Sobre
+O `Mongeasy` é uma biblioteca projetada para simplificar o uso do Mongoose. Com uma interface mais amigável, foi desenvolvida para pequenos e médios serviços que buscam maneiras mais simples e práticas de interagir com o banco de dados MongoDB. O `Mongeasy` agiliza o processo de interação com o banco de dados ao oferecer uma abordagem intuitiva que resume operações complexas em apenas uma chamada de função.
+
+- **Objetivo**: Simplificar o trabalho dos desenvolvedores em ter que produzir diversas funções para otimizarem seus códigos e torna-los mais práticos, visto que `Mongeasy` trata-se de um grande template de tudo que é possível se fazer com o MongoDB.
 
 <h1 align="center">Comunicação</h1>
 <p align="center">
