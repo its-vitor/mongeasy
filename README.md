@@ -24,14 +24,13 @@ O `Mongeasy` é uma biblioteca projetada para simplificar o uso do Mongoose. Com
 - `bcrpt ^5.1.1`
 - `jsonwebtoken ^9.0.2`
 
-<h1 align="center">Comunicação</h1>
-<p align="center">
-    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="">
-    <img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" alt="">
+<h2>Comunicação</h1>
+<p>
+    <a href="https://discord.gg/TFHXUtHUzQ"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt=""></a>
+    <a href="https://www.tiktok.com/@eovitor.dev"><img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" alt=""></a>
 </p>
-<br><br>
-<h1 align="center">Tecnologias</h1>
-<p align="center">
+<h2>Tecnologias</h1>
+<p>
     <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="">
     <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="">
 </p>
