@@ -21,7 +21,7 @@ O `Mongeasy` é uma biblioteca projetada para simplificar o uso do Mongoose. Com
 
 ## Dependências
 - `mongoose ^7.6.3`
-- `bcrpt ^5.1.1`
+- `bcrypt ^5.1.1`
 - `jsonwebtoken ^9.0.2`
 
 <h2>Comunicação</h1>
