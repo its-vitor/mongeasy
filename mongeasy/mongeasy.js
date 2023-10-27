@@ -1,4 +1,6 @@
 import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 /**
  * Estabelece uma conexão com o Mongoose.
@@ -6,7 +8,7 @@ import mongoose from 'mongoose';
  * @returns {Promise<mongoose.Connection>} Solicitação de Conexão com o banco de dados.
  */
 export async function startConnection(url) {
-    return mongoose.createConnection(url, {
+    return createConnection(url, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });
@@ -25,8 +27,43 @@ export class Mongeasy {
         this.collection = collection;
         this.connection = startConnection(url);
 
+        this.helpers = {
+            /**
+             * ### Converte o valor de ID para ObjectId.
+             * @param {*} id - Id a ser convertido
+             */
+            convertToObjectId: async (id) => {
+                return new mongoose.Types.ObjectId(id);
+            },
+            /**
+             * ### Utiliza método Hash para criptografar um valor, comumente senhas.
+             * @param {*} param - Valor a ser criptografado.
+             */
+            encryptHash: async (param) => {
+                return await bcrypt.hash(param, 20);
+            },
+            /**
+             * ### Função que gera um token de acordo com um dicionário Payload.
+             * @param {*} key - Key para criptografar em JWT.
+             * @param {*} payload - Dicionário/Documento que armazena informações.
+             * @param {*} expire - Se o token expira ou não (true/false)
+             * @param {*} expirationValue - Quantos dias/horas o token expira caso ele expire.
+             */
+            generateToken: async (key, payload, expire, expirationValue) => {
+                return jwt.sign(payload, key, { expiresIn: expirationValue } ? expire : null);
+            },
+            /**
+             * ### Verifica o token de acordo com a Key de criptografia.
+             * @param {*} token - Token a ser verificado.
+             * @param {*} key - Key para verificação.
+             * @returns 
+             */
+            verifyToken: async (token, key) => {
+                try { return jwt.verify(token, key); } catch { return null; }
+            },
+        }
         /**
-         * 
+         * ### Seção para inserir documentos/valores ao seu banco de dados.
          */
         this.insert = {
             /**
