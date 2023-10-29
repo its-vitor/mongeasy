@@ -38,21 +38,22 @@ const mongeasy = new Mongeasy(url);
 ```
 Abaixo, alguns exemplos de utilização das funções do mongeasy
 ```js
+// se você inserir uma coleção na classe, não precisará inserir uma nos parâmetros de cada função, mas pode fazer isso se a ação
+// for dentro de outra coleção que não é a principal.
+
 // inserir um documento em uma coleção
 const newDocument = { name: 'Exemplo', age: 30 };
 await mongeasy.insert.insertOne(collection, newDocument);
 
 // atualizar o valor de uma chave
-const filter = { name: 'Exemplo' };
+const filter = { name: 'Exemplo' }; 
 const update = { $set: { age: 31 } };
 await mongeasy.insert.updateFieldValue(collection, filter, update);
 
-// Pesquisar documentos com base em um campo e seu valor
+// pesquisar documentos com base em um campo e o seu valor
 const fieldName = 'name';
-const value = 'Exemplo';
-const result = await mongeasy.search.searchByValue(collection, fieldName, value);
-console.log(result);
-
+const value = 'exemplo';
+console.log(await mongeasy.search.searchByValue(collection, fieldName, value));
 ```
 
 <h2>Comunicação</h1>
