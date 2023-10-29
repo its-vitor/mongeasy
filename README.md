@@ -24,6 +24,37 @@ O `Mongeasy` é uma biblioteca projetada para simplificar o uso do Mongoose. Com
 - `bcrypt ^5.1.1`
 - `jsonwebtoken ^9.0.2`
 
+## Utilização
+Primeiro, instale o pacote mongeasy utilizando o npm.
+```
+npm install mongeasyjs
+```
+em seguida, você pode instanciar a classe Mongeasy e estabelecer uma conexão atráves do url do seu MongoDB
+```js
+import { Mongeasy } from 'mongeasyjs';
+
+const url = 'urlmongodb';
+const mongeasy = new Mongeasy(url);
+```
+Abaixo, alguns exemplos de utilização das funções do mongeasy
+```js
+// inserir um documento em uma coleção
+const newDocument = { name: 'Exemplo', age: 30 };
+await mongeasy.insert.insertOne(collection, newDocument);
+
+// atualizar o valor de uma chave
+const filter = { name: 'Exemplo' };
+const update = { $set: { age: 31 } };
+await mongeasy.insert.updateFieldValue(collection, filter, update);
+
+// Pesquisar documentos com base em um campo e seu valor
+const fieldName = 'name';
+const value = 'Exemplo';
+const result = await mongeasy.search.searchByValue(collection, fieldName, value);
+console.log(result);
+
+```
+
 <h2>Comunicação</h1>
 <p>
     <a href="https://discord.gg/TFHXUtHUzQ"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt=""></a>
