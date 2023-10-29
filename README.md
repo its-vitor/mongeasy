@@ -38,7 +38,8 @@ const mongeasy = new Mongeasy(url);
 ```
 Abaixo, alguns exemplos de utilização das funções do mongeasy
 ```js
-// se você inserir uma coleção na classe, não precisará inserir uma nos parâmetros de cada função, mas pode fazer isso se a ação
+// se você inserir uma coleção na classe, não precisará inserir uma nos
+// parâmetros de cada função, mas pode fazer isso se a ação
 // for dentro de outra coleção que não é a principal.
 
 // inserir um documento em uma coleção
@@ -56,7 +57,7 @@ const value = 'exemplo';
 console.log(await mongeasy.search.searchByValue(collection, fieldName, value));
 ```
 
-<h2>Comunicação</h1>
+<h2>Redes sociais</h1>
 <p>
     <a href="https://discord.gg/TFHXUtHUzQ"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt=""></a>
     <a href="https://www.tiktok.com/@eovitor.dev"><img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" alt=""></a>
