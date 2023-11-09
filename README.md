@@ -68,4 +68,4 @@ console.log(await mongeasy.search.searchByValue(collection, fieldName, value));
     <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
     <img src="https://img.shields.io/badge/json%20web%20tokens-323330?style=for-the-badge&logo=json-web-tokens&logoColor=pink">
 </p>
-
+ 
